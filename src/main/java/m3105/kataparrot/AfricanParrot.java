@@ -2,6 +2,7 @@ package m3105.kataparrot;
 
 public class AfricanParrot extends Parrot {
 
+	private static final double LOAD_FACTOR = 9.0;
 	private int numberOfCoconuts;
 
 	public AfricanParrot(ParrotTypeEnum _type, int numberOfCoconuts, double voltage, boolean isNailed) {
@@ -23,7 +24,7 @@ public class AfricanParrot extends Parrot {
 
 	@Override
 	public double getSpeed() {
-		return Math.max(0, 12.0 - 9.0 * this.numberOfCoconuts);		
+		return Math.max(0, 12.0 - LOAD_FACTOR * this.numberOfCoconuts);		
 	}
 	
 }
